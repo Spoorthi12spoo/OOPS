@@ -50,13 +50,9 @@ acc.add_private_reel("Song reel")
 
 acc.add_archived_reel("Dance reel")
 acc.add_archived_reel("College reel")
-
-# acc.display_private_reels(True)
-
-
-
-# acc.get_archived_reels("1124")
-# acc.set_password("1124","6789")
+acc.display_private_reels(True)
+acc.get_archived_reels("1124")
+acc.set_password("1124","6789")
 
 
 
