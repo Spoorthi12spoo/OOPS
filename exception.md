@@ -227,26 +227,26 @@ When we write:
 class AgeError(Exception):
 ```
 class AgeError(Exception):
-##We are telling Python:
+## We are telling Python:
 👉 “AgeError is also an exception type.”
 ##So Python can:
 •	catch it in except
 •	treat it like other errors
 
-##❌ If you don’t inherit from Exception
+## ❌ If you don’t inherit from Exception
 class AgeError:
     pass
 Python will NOT treat it as an exception.
 raise AgeError → error.
 So inheritance is must.
 
-##2️⃣ Why Do We Write pass?
+## 2️⃣ Why Do We Write pass?
 Because sometimes we don’t need extra code inside class.
 pass means:
 👉 “Empty class for now.”
 We only need a name to identify the error.
 
-##🧠 Interview One-Line Answer
+## 🧠 Interview One-Line Answer
 class AgeError(Exception) creates a user-defined exception by inheriting from the built-in Exception class so it can be raised and handled like other exceptions.
 
 
