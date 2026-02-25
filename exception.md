@@ -214,3 +214,41 @@ except AgeError as e:
 
 finally:
     print("Program finished.")
+
+## 1️⃣ Why Do We Write `class AgeError(Exception)`?
+
+Because we are creating a **custom exception**.
+
+👉 `Exception` is the parent class of all exceptions in Python.
+
+When we write:
+
+```python
+class AgeError(Exception):
+
+class AgeError(Exception):
+##We are telling Python:
+👉 “AgeError is also an exception type.”
+##So Python can:
+•	catch it in except
+•	treat it like other errors
+
+##❌ If you don’t inherit from Exception
+class AgeError:
+    pass
+Python will NOT treat it as an exception.
+raise AgeError → error.
+So inheritance is must.
+________________________________________
+##2️⃣ Why Do We Write pass?
+Because sometimes we don’t need extra code inside class.
+pass means:
+👉 “Empty class for now.”
+We only need a name to identify the error.
+
+##🧠 Interview One-Line Answer
+class AgeError(Exception) creates a user-defined exception by inheriting from the built-in Exception class so it can be raised and handled like other exceptions.
+
+
+
+
