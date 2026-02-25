@@ -170,5 +170,130 @@ except:
 Watch the following YouTube video from my channel:
 - [Watch the tutorial on YouTube](https://www.youtube.com/watch?v=pee2Zl3en6I)
 
+✅ 1️⃣ Why Do We Write class AgeError(Exception)?
 
+Because we are creating a custom exception.
+
+👉 Exception is the parent class of all exceptions in Python.
+
+When we write:
+
+class AgeError(Exception):
+
+We are telling Python:
+
+👉 “AgeError is also an exception type.”
+
+So Python can:
+
+catch it in except
+
+treat it like other errors
+
+❌ If you don’t inherit from Exception
+class AgeError:
+    pass
+
+Python will NOT treat it as an exception.
+raise AgeError → error.
+
+So inheritance is must.
+
+✅ 2️⃣ Why Do We Write pass?
+
+Because sometimes we don’t need extra code inside class.
+
+pass means:
+👉 “Empty class for now.”
+
+We only need a name to identify the error.
+
+Example
+class AgeError(Exception):
+    pass
+
+raise AgeError("Age must be 18+")
+
+Output:
+
+AgeError: Age must be 18+
+✅ 3️⃣ Real Meaning in Simple Words
+
+👉 We create a new error type called AgeError
+👉 Python now understands it as an exception
+👉 We can raise & catch it
+
+✅ 4️⃣ Real-Life Example
+
+ATM example:
+
+class LowBalanceError(Exception):
+    pass
+
+Because normal errors don’t explain problem clearly.
+
+Instead of:
+
+Exception: Error
+
+We get:
+
+LowBalanceError: Not enough balance
+
+More professional 👍
+
+🧠 Interview One-Line Answer
+
+class AgeError(Exception) creates a user-defined exception by inheriting from the built-in Exception class so it can be raised and handled like other exceptions.
+
+If you want next, I can explain:
+👉 How custom exception works internally
+👉 When to use custom vs built-in
+👉 Advanced custom exception with __init__
+
+Just tell me, Spoorthi 😎💻✨
+
+give me full code of ageerror
+
+Superrr 😎🔥 Let’s write a complete working program using AgeError.
+
+✅ Full Code – Custom AgeError Example
+class AgeError(Exception):
+    pass
+
+
+try:
+    age = int(input("Enter your age: "))
+
+    if age < 18:
+        raise AgeError("You must be 18 or older to register.")
+
+    print("Registration successful!")
+
+except ValueError:
+    print("Please enter a valid number.")
+
+except AgeError as e:
+    print("Custom Exception:", e)
+
+finally:
+    print("Program finished.")
+
+1️⃣ We create custom exception
+class AgeError(Exception):
+    pass
+
+Now AgeError behaves like built-in exceptions.
+
+2️⃣ Inside try block
+
+Convert input to integer
+
+If age < 18 → raise custom exception
+
+3️⃣ Except blocks
+
+ValueError → handles wrong input like "spoo"
+
+AgeError → handles age below 18
  Make sure to subscribe to the channel for more Python tutorial and updates!
